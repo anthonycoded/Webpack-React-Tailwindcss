@@ -18,8 +18,8 @@ module.exports = (env, argv) => {
     ],
     devServer: {
       open: true,
-      clientLogLevel: 'silent',
-      contentBase: './build',
+      clientLogLevel: "silent",
+      contentBase: "./build",
       historyApiFallback: true,
       hot: true,
     },
@@ -52,10 +52,11 @@ module.exports = (env, argv) => {
           test: /\.css$/i,
           include: path.resolve(__dirname, "src"),
           exclude: /node_modules/,
-          use: [
-            MiniCssExtractPlugin.loader,
-            "css-loader", "postcss-loader",
-          ],
+          use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
+        },
+        {
+          test: /\.(png|svg|jpg|jpeg|gif)$/i,
+          type: "asset/resource",
         },
       ],
     },
