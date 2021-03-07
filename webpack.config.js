@@ -1,6 +1,6 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const { HotModuleReplacementPlugin } = require('webpack')
+const { HotModuleReplacementPlugin } = require("webpack");
 
 module.exports = (env, argv) => {
   return {
@@ -21,8 +21,10 @@ module.exports = (env, argv) => {
       clientLogLevel: "silent",
       contentBase: "./build",
       historyApiFallback: true,
+      port: 3000,
       hot: true,
     },
+    devtool: "source-map",
     module: {
       rules: [
         {
