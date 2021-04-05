@@ -7,7 +7,7 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   
   return (
-    <div className="pb-12">
+    <div className="pb-12 fixed h-full w-full mb-8">
       <div className="bg-gray-700 h-14 flex justify-between items-center fixed w-full px-4">
         <Link to="/" className="text-xl font-bold text-yellow-400">
           Webpack-React-Tailwind
