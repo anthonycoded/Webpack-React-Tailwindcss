@@ -10,7 +10,7 @@ module.exports = merge(common, {
   mode: "development",
   entry: path.join(__dirname, "src", "index.js"),
   output: {
-    path: path.resolve(__dirname, "build"),
+    path: path.resolve(__dirname, "/build/bundles"),
     filename: "bundle.js",
   },
   plugins: [
