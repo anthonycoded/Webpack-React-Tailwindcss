@@ -5,13 +5,20 @@ import Logo from "../../assets/LogoWeb.png";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [toggle, setToggle] = useState(false);
+  const toggleClass = " bg-primary-main transform translate-x-6";
+  const unToggleClass = "bg-white";
 
-  const noPointer = { cursor: "pointer" };
+  function toggleSwitch() {
+    setToggle(!toggle);
+  }
 
+  console.log(toggle);
   const signInClick = () => {
     //dispatch(userLoginMain());
     // dispatch(userLoginMainFetch());
   };
+
   return (
     <div className="w-full h-full">
       <div className="h-full flex flex-row">
@@ -58,14 +65,20 @@ const Login = () => {
               </div>
               <div className="flex items-center w-full justify-between pb-12">
                 <p className="text-inActive font-semibold">Remember UserId</p>
-                <div class="flex items-center justify-center">
-                  <input type="checkbox" name="toggle" class="hidden" />
+                <div className="flex items-center justify-center">
+                  <input type="checkbox" name="toggle" className="hidden" />
                   <label
-                    class="relative w-11 h-7 flex select-none cursor-pointer"
-                    for="toggle"
+                    className="relative w-11 h-7 flex select-none cursor-pointer"
+                    htmlFor="toggle"
                   >
-                    <span className="absolute left-0 top-0 h-full w-full bg-inActive rounded-full"></span>
-                    <span className="flex border-inActive items-center  justify-center ease-in-out h-7 w-7 border-2 absolute z-10 rounded-full bg-white transition-transform duration-300"></span>
+                    <span className="absolute h-full w-full bg-inActive rounded-full"></span>
+                    <span
+                      onClick={toggleSwitch}
+                      className={
+                        "flex border-inActive bg-white justify-center ease-in-out h-7 w-7 border-2 absolute z-10 rounded-full transition-transform duration-300" +
+                        (toggle ? toggleClass : unToggleClass)
+                      }
+                    ></span>
                   </label>
                 </div>
               </div>
