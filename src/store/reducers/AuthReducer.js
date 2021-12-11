@@ -9,7 +9,7 @@ const initialState = {
   error: null,
 };
 
-export const loginReducer = (state = initialState, action) => {
+export const AuthReducer = (state = initialState, action) => {
   switch (action.type) {
     case USER_LOGIN_ATTEMPT:
       return {
