@@ -8,9 +8,9 @@ const Header = () => {
 
   return (
     <div className="h-14 w-full z-30 pb-12 absolute">
-      <div className="bg-blue-400 h-14 flex justify-between items-center fixed w-full px-4 shadow-xl">
+      <div className=" h-14 bg-primary-main flex justify-between items-center fixed w-full px-4 shadow-xl z-10">
         <Link to="/" className="text-xl font-bold ">
-          Logo
+          Webpack-React-TailwindCSS
         </Link>
         <a className="md:hidden" onClick={() => setOpen(!open)}>
           <Menu></Menu>
