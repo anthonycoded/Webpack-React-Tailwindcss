@@ -1,6 +1,7 @@
 import React from "react";
+import { Provider } from "react-redux";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
+import store from "./store/store";
 import "./app.css";
 import Admin from "./components/Admin";
 import Header from "./components/UI/Header";
@@ -12,22 +13,21 @@ import ScrollIntoView from "./components/UI/ScrollIntoView";
 
 const App = () => {
   return (
-    <div className="h-full">
-      <Router>
-        <Header className="display-block"></Header>
-        <ScrollIntoView>
-          <Switch>
-            <Route path="/" exact>
-              <LandingPage></LandingPage>
-            </Route>
-            <Route path="/admin" exact component={Admin}></Route>
-            <Route path="/login" component={Login}></Route>
-            <Route path="/register" component={Register}></Route>
-          </Switch>
-        </ScrollIntoView>
-        <Footer></Footer>
-      </Router>
-    </div>
+    <Router>
+      <Provider store={store}></Provider>
+      <Header className="display-block"></Header>
+      <ScrollIntoView>
+        <Switch>
+          <Route path="/" exact>
+            <LandingPage></LandingPage>
+          </Route>
+          <Route path="/admin" exact component={Admin}></Route>
+          <Route path="/login" component={Login}></Route>
+          <Route path="/register" component={Register}></Route>
+        </Switch>
+      </ScrollIntoView>
+      <Footer></Footer>
+    </Router>
   );
 };
 
