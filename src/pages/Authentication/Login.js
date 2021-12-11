@@ -132,7 +132,7 @@ const Login = () => {
                   >
                     Login
                   </button>
-                  <div className="items-end w-full flex justify-end mt-2">
+                  <div className="items-end w-full flex justify-end mt-2 pr-8">
                     <a className="flex align-baseline  text-sm " href="#">
                       Forgot Password?
                     </a>
