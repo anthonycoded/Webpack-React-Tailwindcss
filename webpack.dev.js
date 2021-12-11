@@ -10,8 +10,8 @@ module.exports = merge(common, {
   mode: "development",
   entry: path.join(__dirname, "src", "index.js"),
   output: {
-    path: path.resolve(__dirname, "/build/bundles"),
-    filename: "bundle.js",
+    path: path.resolve(__dirname, "/build"),
+    filename: "bundles/bundle.js",
   },
   plugins: [
     new MiniCssExtractPlugin({
