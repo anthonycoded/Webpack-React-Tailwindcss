@@ -6,9 +6,9 @@ import "./app.css";
 import Admin from "./components/Admin";
 import Header from "./components/UI/Header";
 import Footer from "./components/UI/Footer";
-import LandingPage from "./components/LandingPage";
-import Login from "./components/Authentication/Login";
-import Register from "./components/Authentication/Register";
+import LandingPage from "./pages/LandingPage";
+import Login from "./pages/Authentication/Login";
+import Register from "./pages/Authentication/Register";
 import ScrollIntoView from "./components/UI/ScrollIntoView";
 
 const App = () => {
