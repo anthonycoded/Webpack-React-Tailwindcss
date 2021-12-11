@@ -1,9 +1,7 @@
-import {
-  USER_LOGIN_ATTEMPT,
-  USER_LOGIN_SUCCESS1,
-  USER_LOGIN_FAIL,
-  CLEAR_LOGIN_STATE,
-} from "../constants/authConstants";
+const USER_LOGIN_ATTEMPT = "USER_LOGIN_ATTEMPT";
+const USER_LOGIN_SUCCESS1 = "USER_LOGIN_SUCCESS1";
+const USER_LOGIN_FAIL = "USER_LOGIN_FAIL";
+const CLEAR_LOGIN_STATE = "CLEAR_LOGIN_STATE";
 
 const initialState = {
   loading: null,
